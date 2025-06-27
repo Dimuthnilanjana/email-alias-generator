@@ -68,7 +68,7 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-muted-foreground">© 2024 AliasGen. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© 2025 AliasGen. All rights reserved.</p>
             <p className="text-sm text-muted-foreground flex items-center space-x-1">
               <span>Made with</span>
               <Heart className="h-3 w-3 text-red-500" />
