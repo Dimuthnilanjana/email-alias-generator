@@ -1,7 +1,12 @@
+"use client"
+import { useState } from "react"
 import Link from "next/link"
 import { Mail, Globe, Heart } from "lucide-react"
+import { ContactModal } from "@/components/contact-modal"
 
 export function Footer() {
+  const [isContactOpen, setIsContactOpen] = useState(false)
+
   return (
     <footer className="border-t bg-background">
       <div className="container mx-auto px-4 py-8">
@@ -26,13 +31,13 @@ export function Footer() {
               <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Home
               </Link>
-              <Link
-                href="mailto:contact@dimuthnilanjana.com"
+              <button
+                onClick={() => setIsContactOpen(true)}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors flex items-center space-x-1"
               >
                 <Mail className="h-3 w-3" />
                 <span>Contact Developer</span>
-              </Link>
+              </button>
               <Link
                 href="https://www.dimuthnilanjana.com"
                 target="_blank"
@@ -73,6 +78,7 @@ export function Footer() {
           </div>
         </div>
       </div>
+      <ContactModal open={isContactOpen} onOpenChange={setIsContactOpen} />
     </footer>
   )
 }
