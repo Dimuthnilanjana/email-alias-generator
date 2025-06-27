@@ -8,7 +8,7 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Email Alias Generator - Create Multiple Email Aliases",
+  title: "Alias Gen - Create Multiple Email Aliases",
   description:
     "Generate unlimited email aliases for better privacy and organization. Perfect for avoiding spam and tracking email usage.",
   keywords: "email alias, email generator, privacy, spam protection, email organization",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "AliasGen",
     type: "website",
   },
-    generator: 'v0.dev'
+   
 }
 
 export default function RootLayout({
