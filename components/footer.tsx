@@ -2,8 +2,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Mail, Globe, Heart } from "lucide-react"
-import { ContactModal } from "@/components/contact-modal"
-
+import { ContactModal } from "./contact-modal"
 export function Footer() {
   const [isContactOpen, setIsContactOpen] = useState(false)
 

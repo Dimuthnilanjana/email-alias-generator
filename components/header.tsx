@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Menu, Mail, ExternalLink } from "lucide-react"
-import { ContactModal } from "@/components/contact-modal"
+import { ContactModal } from "./contact-modal"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -72,9 +72,11 @@ export function Header() {
                     item.action ? (
                       <button
                         key={item.name}
-                        onClick={item.action}
+                        onClick={() => {
+                          item.action?.();
+                          setIsOpen(false);
+                        }}
                         className="flex items-center space-x-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                        onClick={() => setIsOpen(false)}
                       >
                         <span>{item.name}</span>
                       </button>
